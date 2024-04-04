@@ -1,0 +1,37 @@
+.form-container {
+    width: 350px;
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+
+        .form__header-container {
+            margin-bottom: 10px;
+        }
+
+        .form__header-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: center;
+        }
+    
+        .form__controls-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form__buttons-container {
+            align-self: flex-end;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 15px;
+
+            .left-btn {
+                margin-right: 5px;
+            }
+        }
+    }
+}
+

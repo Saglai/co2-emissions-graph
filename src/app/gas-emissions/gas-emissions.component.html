@@ -1,0 +1,8 @@
+<div class="outer-containter">
+    <app-data-entry-form class="form-container" [config]="formConfig" (newDataEvent)="onAddData($event)"></app-data-entry-form>
+
+    <div class="chart-container" #chart></div>
+    <mat-card class="total-emissions-title">
+        Общая сумма выбросов СО2 от сжигания {{fuelName | transformFuelName}} {{totalEmissions}} тонн
+    </mat-card>
+</div>

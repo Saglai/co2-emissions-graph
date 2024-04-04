@@ -1,0 +1,38 @@
+<div class="form-container">
+    <mat-card>
+        <mat-card-content>
+            <form class="form" [formGroup]="form">
+                <div class="form__header-container">
+                    <mat-icon aria-hidden="false" aria-label="person icon" fontIcon="person"></mat-icon>
+                    <span>{{formHeader}} {{config.labels.fuelName | transformFuelName}} ({{config.labels.fuelMeasure}})</span> 
+                </div>
+
+                <div class="form__controls-container">
+                    <mat-form-field>
+                        <mat-label>{{config.labels.fuelName}} ({{config.labels.fuelMeasure}})</mat-label>
+                        <input matInput formControlName="fuel" placeholder="300" [errorStateMatcher]="matcher">
+                        <mat-error *ngIf="fuel?.hasError('required')">
+                            Это поле обязательно для заполнения
+                        </mat-error>
+                        
+                        <mat-error *ngIf="fuel?.hasError('numberValidator')">
+                            {{fuel?.errors?.['requiredValue']}}
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <mat-label>{{dateInputLabel}} ({{config.labels.fuelName}})</mat-label>
+                        <input [min]="config.dates.min" [max]="config.dates.max" matInput [matDatepicker]="picker" formControlName="date">
+                        <mat-datepicker-toggle matIconPrefix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+
+                <div class="form__buttons-container">
+                    <button class="left-btn btn" mat-raised-button (click)="onResetForm()">Откатить</button>
+                    <button class="right-btn btn" mat-raised-button (click)="onSave()" [disabled]="!form.valid">Сохранить</button>
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>
