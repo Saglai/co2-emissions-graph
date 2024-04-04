@@ -28,11 +28,15 @@ export class AppComponent {
     },
     {
       x: new Date('29 Nov 2023'),
-      y: 20.95
+      y: 80.95
+    },
+    {
+      x: new Date('1 Dec 2023'),
+      y: 180.95
     },
     {
       x: new Date('14 Dec 2023'),
-      y: 20.95
+      y: 280.95
     },
   ];
 }
