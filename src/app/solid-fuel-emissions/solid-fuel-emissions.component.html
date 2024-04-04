@@ -1,0 +1,15 @@
+<div class="outer-container">
+  <app-data-entry-form class="form-container" [config]="formConfig" (newDataEvent)="onAddData($event)"></app-data-entry-form>
+
+  <div class="chart-container" id="chart">
+    <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [xaxis]="chartOptions.xaxis"
+      [yaxis]="chartOptions.yaxis" [stroke]="chartOptions.stroke" [dataLabels]="chartOptions.dataLabels"></apx-chart>
+  </div>
+
+  <mat-card class="total-emissions-title">
+    Общая сумма выбросов СО2 от сжигания {{fuelName | transformFuelName}} {{totalEmissions}} тонн
+  </mat-card>
+</div>
+
+
+  

@@ -1,0 +1,30 @@
+.outer-containter {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-left: 10px;
+
+    .form-container {
+        display: inline-block;
+        padding-left: 50px;
+    }
+
+    .chart-container {
+        margin-top: 10px;
+        width: 600px; 
+        height: 370px;
+    }
+
+    .total-emissions-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        height: 30px;
+        font-weight: 450;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-left: 60px;
+    }
+}
+
